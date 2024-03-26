@@ -1,15 +1,28 @@
-const parent = React.createElement("div", { id: "parent" }, [
-  React.createElement("div", { id: "child1" }, [
-    React.createElement("h1", {}, "Hello React!!"),
-    React.createElement("h2", {}, "Hello React!!"),
-  ]),
-  React.createElement("div", { id: "child2" }, [
-    React.createElement("h1", {}, "Hello React!!"),
-    React.createElement("h2", {}, "Hello React!!"),
-  ]),
-]);
+import React from "react";
+import ReactDOM from "react-dom";
 
-const heading = React.createElement("h1", { id: "heading" }, "Hello React!!");
-console.log(heading);
+// const parent = React.createElement("div", { id: "parent" }, [
+//   React.createElement("div", { id: "child1" }, [
+//     React.createElement("h1", {}, "Hello React!!"),
+//     React.createElement("h2", {}, "Hello React!!"),
+//   ]),
+//   React.createElement("div", { id: "child2" }, [
+//     React.createElement("h1", {}, "Hello React!!"),
+//     React.createElement("h2", {}, "Hello React!!"),
+//   ]),
+// ]);
+const Title = () => (
+  <div className="div">
+    <h1 className="heading">Hello World!!</h1>
+  </div>
+);
+
+const JsxHeading = () => (
+  <div className="container">
+    <Title />
+    <h1 className="heading">Namaste React from JSX</h1>
+  </div>
+);
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
+root.render(<JsxHeading/>);
